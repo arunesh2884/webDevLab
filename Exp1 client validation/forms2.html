@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <h1>Registeration form</h1>
+        <form action="">
+            name: <input type="text" required><br>
+            Register NO: <input type="text" pattern="[0-9]{6}[A-Z]{1}[0-9]{3}" required> <br>
+            phone NO: <input type=" " pattern="[0-9]{5}-[0-9]{5}" required><br>
+            <label for="gender" >
+                Gender:
+                <input type="radio" name="gender" id="gender" required>Male
+                <input type="radio" name="gender" id="gender"required>Female
+            </label>
+            <br>
+            year: <input type="text"> <br>
+            email id :<input type="email" required> <br>
+            dept :<input type="text" required> <br>
+            
+            <label for="">
+                <h3>
+                    members of clubs: 
+                </h3>
+                <input type="checkbox" name="clubs" id="">varna
+                <input type="checkbox" name="clubs" id="">photons
+                <input type="checkbox" name="clubs" id="">music
+                <input type="checkbox" name="clubs" id="">dance
+                <input type="checkbox" name="clubs" id="">visual arts
+            </label>
+            <br>
+            <label for="">
+                <h3>
+                    volunteering grps:
+                </h3>
+                
+                <input type="radio" name="grps" id="" value="nss">NSS
+                <input type="radio" name="grps" id="" value="ncc">NCC
+                <input type="radio" name="grps" id="" value="yrc">YRC
+            </label>
+            <br>
+            <label for="">
+                <h3>
+                    days u r free: 
+                </h3>
+                <input type="checkbox" name="free" id="">Monday
+                <input type="checkbox" name="free" id="">Tuesday
+                <input type="checkbox" name="free" id="">Wednesday
+                <input type="checkbox" name="free" id="">Thursday
+                <input type="checkbox" name="free" id="">Friday
+            </label>
+            <br><br>
+            <!-- <input type="submit"> -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

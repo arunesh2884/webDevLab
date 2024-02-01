@@ -1,0 +1,37 @@
+input:invalid{
+    border: 2px dashed red;
+   
+  }
+  
+  form:valid button {
+    background-color: rgb(56, 223, 50);
+    color: #060;
+    visibility: visible;
+  }
+
+button{
+    padding: 20px;
+    position: relative;
+    left:40%;
+    border-radius: 16px;
+    visibility: hidden;
+    border: none;
+}
+
+  form:invalid  button{
+    background-color: rgb(226, 0, 0);
+    color: rgb(255, 255, 255);
+  } 
+
+input:valid {
+    border: 2px solid rgb(0, 0, 0);
+
+  }
+
+.form{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 10px 96px;
+    border: solid 3px rgb(0, 0, 0);
+}
