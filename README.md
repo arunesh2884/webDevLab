@@ -4,3 +4,4 @@ activity 0:
   perform git push and pull operations
 
 trying to push updated file
+update check:
