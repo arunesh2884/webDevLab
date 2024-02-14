@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        .delete-btn {
+            float: right;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Event Management</h1>
+        <form id="eventForm">
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" required>
+            <label for="eventDate">Event Date:</label>
+            <input type="text" id="eventDate" placeholder="YYYY-MM-DD" required>
+            <button type="submit">Add Event</button>
+        </form>
+        <ul id="eventList"></ul>
+    </div>
+
+    <script>
+        const eventForm = document.getElementById('eventForm');
+        const eventNameInput = document.getElementById('eventName');
+        const eventDateInput = document.getElementById('eventDate');
+        const eventList = document.getElementById('eventList');
+
+        eventForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const eventName = eventNameInput.value;
+            const eventDate = eventDateInput.value;
+
+            if (eventName.trim() && eventDate.trim()) {
+                addEvent(eventName, eventDate);
+                eventNameInput.value = '';
+                eventDateInput.value = '';
+            }
+        });
+
+        function addEvent(name, date) {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <strong>${name}</strong> - ${date}
+                <button class="delete-btn" onclick="deleteEvent(this)">Delete</button>
+            `;
+            eventList.appendChild(li);
+        }
+
+        function deleteEvent(btn) {
+            const li = btn.parentElement;
+            li.remove();
+        }
+    </script>
+</body>
+</html>

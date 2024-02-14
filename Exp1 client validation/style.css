@@ -1,37 +1,77 @@
-input:invalid{
-    border: 2px dashed red;
-   
-  }
-  
-  form:valid button {
-    background-color: rgb(56, 223, 50);
-    color: #060;
-    visibility: visible;
-  }
-
-button{
-    padding: 20px;
-    position: relative;
-    left:40%;
-    border-radius: 16px;
-    visibility: hidden;
-    border: none;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-  form:invalid  button{
-    background-color: rgb(226, 0, 0);
-    color: rgb(255, 255, 255);
-  } 
+.form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-input:valid {
-    border: 2px solid rgb(0, 0, 0);
+h1 {
+  text-align: center;
+  color: #333;
+}
 
-  }
+form {
+  margin-top: 20px;
+}
 
-.form{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 10px 96px;
-    border: solid 3px rgb(0, 0, 0);
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid,
+input[type="radio"]:valid,
+input[type="checkbox"]:valid {
+  border-style: solid ;
+  border-width: 2px;
+  border-color: green;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+input[type="radio"]:invalid,
+input[type="checkbox"]:invalid {
+  border-color: red;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+label {
+  font-weight: bold;
+}
+
+.days-free label {
+  display: inline-block;
+  margin-right: 15px;
 }

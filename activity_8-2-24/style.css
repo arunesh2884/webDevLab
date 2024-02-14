@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: rgba(253, 243, 199, 0.505);
 }
 
 header {
-    background-color: #333;
+    background:  linear-gradient(90deg,rgb(5, 12, 94) ,hsl(154, 90%, 40%));
+    /* background-color: rgb(206, 0, 165); */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -18,22 +19,29 @@ header img {
 }
 
 nav {
-    background-color: #444;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 59, 14);
     overflow: hidden;
+    align-items: center;
 }
 
 nav a {
     float: left;
     display: block;
     color: #fff;
+    margin-left: 40px;
     text-align: center;
     padding: 14px 16px;
+    font-size: 1.2em;
     text-decoration: none;
+    transition: 200ms;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: #333;
+    font-size: x-large;
+    /* color: #333; */
+
 }
 
 ul {
@@ -76,8 +84,9 @@ textarea {
 }
 
 button {
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(34, 255, 0);
+    color: rgb(1, 49, 0);
+    font-weight: 600;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -85,5 +94,6 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: rgb(97, 88, 88);
+    color: #ddd;
 }
